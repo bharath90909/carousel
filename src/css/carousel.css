@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: rgb(234, 239, 212);
+  line-height: 1.1;
+  letter-spacing: 0.052em;
+}
+
+h1,
+h3 {
+  letter-spacing: 0.0625em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+/** Carousel Section **/
+
+.carousel-container {
+  margin: 1.25em auto;
+}
+
+.carousel-container > h1 {
+  color: rgb(36, 100, 168);
+}
+.carousel-container p {
+  text-align: center;
+  margin-bottom: 0.8em;
+}
+
+.carousel-item {
+  padding: 1.5em;
+  max-height: 30em;
+  border: 0.0625em solid #ddd;
+  border-radius: 1.3em;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2);
+  background-color: rgb(218, 234, 245);
+  margin: 1.875em 0.625em;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-content {
+  margin-top: 1em;
+}
+
+.slick-slide > div {
+  margin: 0 2.5em;
+}
+
+.carousel-img {
+  max-width: 15.625em;
+  height: 15.625em;
+  margin: 0 auto;
+}
+.carousel-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensuring the image is responsive */
+  border-radius: 10%;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2);
+}
+
+/** Dots Section **/
+.slick-dots {
+  bottom: -1.875em;
+  text-align: center;
+  padding: 0;
+  list-style: none;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 0.3125em;
+}
+
+.slick-dots li button {
+  width: 1em;
+  height: 1em;
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.slick-dots li button:before {
+  /* Color of inactive dots */
+  color: rgb(166, 201, 170);
+  font-size: 0.8em;
+  line-height: 1;
+  content: "•"; /* Dot character */
+}
+
+.slick-dots li.slick-active button:before {
+  /* Color of the active dot */
+  color: rgb(103, 160, 123);
+}
+
+/* Media Queries for responsiveness */
+
+/* Desktops */
+
+@media (min-width: 1025px) {
+  .carousel-container {
+    width: 80%;
+  }
+  .slick-center .carousel-item {
+    transform: scale(1.1); /* Highlighting the center item */
+  }
+}
+
+@media (max-width: 1250px) {
+  .carousel-container {
+    width: 85%;
+  }
+  .carousel-item {
+    margin: 1.875em 0.3125em;
+  }
+}
+/* Tablets */
+
+@media (max-width: 1024px) {
+  .carousel-container {
+    width: 90%;
+  }
+
+  .carousel-item {
+    margin: 1.25em 0.3125em;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 100%; /* Full width of the viewport */
+  }
+}
